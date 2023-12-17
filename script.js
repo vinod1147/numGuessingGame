@@ -1,27 +1,39 @@
 const num = document.querySelector('#number')
-const submit = document.querySelector('.submit')
+let submit = document.querySelector('.submit')
 const msg = document.querySelector('.msg')
+const prevGuess = document.querySelector('.prevGuess')
 
-const randomNum = Math.round(Math.random() * 100)
+const randomNum = Math.round(Math.random() * 1000)
 
-const prevNum = []
+let prevNum = []
+// let totalGuess = 10
 
 console.log(randomNum);
 
 submit.addEventListener('click', function (e) {
     e.preventDefault()
 
-    // prevNum.push(Number(submit.value))
-    // console.log(prevNum);
-    console.log(submit.value);
+    prevNum.push(Number(document.querySelector('input').value))
 
     numCheck();
 
-    // rand/omNum.ad
+    prevGuess.innerHTML = prevNum;
+
+    endGame()
 
 })
 
-console.log(submit.value);
+function endGame() {
+    if (prevNum.length === 10) {
+        alert(`gamer over.... the random number was ${randomNum}`)
+        num.value = ''
+        msg.innerHTML = ''
+        prevNum = []
+        prevGuess.innerHTML = prevNum
+    }
+}
+
+// console.log(submit.value);
 
 function numCheck() {
     if (isNaN(submit.value)) {
