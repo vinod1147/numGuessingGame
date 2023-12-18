@@ -2,6 +2,7 @@ const num = document.querySelector('#number')
 let submit = document.querySelector('.submit')
 const msg = document.querySelector('.msg')
 const prevGuess = document.querySelector('.prevGuess')
+const warn = document.querySelector('.warn')
 
 const randomNum = Math.round(Math.random() * 1000)
 
@@ -13,7 +14,7 @@ console.log(randomNum);
 submit.addEventListener('click', function (e) {
     e.preventDefault()
 
-    prevNum.push(Number(document.querySelector('input').value))
+    prevNum.push(num.value)
 
     numCheck();
 
@@ -21,7 +22,26 @@ submit.addEventListener('click', function (e) {
 
     endGame()
 
+    emptyNumCheck()
+
+    includeCheck()
+
+
 })
+
+function includeCheck() {
+    if (prevNum.includes(prevNum[0])) {
+        warn.innerHTML = "all clear"
+    }
+}
+
+function emptyNumCheck() {
+    if (num.value === "") {
+        warn.innerHTML = "pls enter a number"
+        msg.innerHTML = ''
+        prevNum = []
+    }
+}
 
 function endGame() {
     if (prevNum.length === 10) {
@@ -33,10 +53,8 @@ function endGame() {
     }
 }
 
-// console.log(submit.value);
-
 function numCheck() {
-    if (isNaN(submit.value)) {
+    if (isNaN(num.value)) {
         alert("enter a valid number");
     } else if (num.value > randomNum) {
         msg.innerHTML = 'number is tooo high';
