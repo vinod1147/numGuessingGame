@@ -3,16 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <form>
-      <input type="text" name="number" id="number" />
-      <button type="submit" class="submit">check</button>
-    </form>
-    <p>your previous guesses are: <span class="prevGuess"></span></p>
-    <p>message for you: <span class="msg"></span></p>
-    <p>warning: <span class="warn">all clear</span></p>
+    <div class="app">
+      <h1 class="guessTitle">guess the number</h1>
+      <p class="appSubHeading">
+        you have 10 chances to guess the no. the random number is b/w 0 to
+        1000.... all the best
+      </p>
+      <form>
+        <input
+          type="text"
+          name="number"
+          id="number"
+          placeholder="enter the number"
+        />
+        <button type="submit" class="submit">check</button>
+      </form>
+      <div class="msges">
+        <p class="msgesP">
+          your previous guesses are: <span class="prevGuess msgesPValue"></span>
+        </p>
+        <p class="msgesP">
+          message for you: <span class="msg msgesPValue"></span>
+        </p>
+        <p class="msgesP">
+          warning: <span class="warn msgesPValue">all clear</span>
+        </p>
+      </div>
+      <p class="game">game of devs, by the devs and for the devs</p>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
