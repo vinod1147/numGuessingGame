@@ -8,7 +8,7 @@ Game of Devs, by the Devs and for the Devs
 
 Check below 👇👇
 
-![logo](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rotating_earth_%28large%29.gif/300px-Rotating_earth_%28large%29.gif)
+![logo](gif.gif)
 
 ## How to use
 
