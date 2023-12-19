@@ -8,7 +8,7 @@ Game of Devs, by the Devs and for the Devs
 
 Check below 👇👇
 
-![logo](gif.gif)
+![logo](https://i.ibb.co/vs9WMqH/gif.gif)
 
 ## How to use
 
