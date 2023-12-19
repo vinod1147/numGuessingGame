@@ -1,7 +1,7 @@
 {
     "name": "Numero",
     "description": "Ever feel the urge to flex your intuition and deduction skills? Look no further than Numero, the addictively fun extension that turns your browser into a mind-bending number guessing paradise!",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "manifest_version": 3,
     "action": {
         "default_popup": "index.html",
